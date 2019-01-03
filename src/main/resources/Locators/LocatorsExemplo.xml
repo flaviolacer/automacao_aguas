@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<locators>
+	<!-- MktPlace - Padrão de Nomenclatura -->
+	<!-- Botão: 		Tela.BTNNomeBotao -->
+	<!-- Cabeçalho: 	Header.Nome -->
+	<!-- Campo Texto: 	Tela.TXTNomedoCampo -->
+	<!-- Check Box: 	Tela.CheckNomedoCampoOpcao -->
+	<!-- Combo Box: 	Tela.ComboNomedoCampo -->
+	<!-- Opção do Menu: Menu.OpcaoNomedoLink -->
+	<!-- RadioButton: 	Tela.RadioNomedoCampoOpcao -->
+	<!-- Tabela: 		Tela.TabelaNomeTabela -->
+	
+	<!-- Portal Rede Ipiranga -->
+	
+	<!-- Tela de Login -->
+	<entry key="TelaLogin.TXTUsuario"							by="xpath"	value="//*[@id='codigoUsuario']" />
+	<entry key="TelaLogin.TXTSenha"								by="xpath"	value="//*[@id='senha']" />
+	<entry key="TelaLogin.BTNEntrar"							by="xpath"	value="//*[@id='usuario']/fieldset/div[3]/div/input" />
+	<entry key="TelaLogin.MsgLogin"								by="xpath"	value="//*[@id='login-msg']" />
+	
+	<!-- Tela Principal -->
+ 	<entry key="Menu.Pedidos"									by="xpath"	value="//*[@id='apps-menu']/ul/li[1]/a/span" />
+	<entry key="Menu.ConsultarPedidos"							by="xpath"	value="//*[@id='apps-menu']/ul/li[1]/ul/li/a/span" />
+ 	<entry key="Menu.ControleComissoes"							by="xpath"	value="//*[@id='apps-menu']/ul/li[3]/a/span"/> <!--"//*[contains(text(), 'Gestão')]" /> -->
+	<entry key="Menu.ImportarXLS"								by="xpath"	value="//*[@id='apps-menu']/ul/li[3]/ul/li[2]/a/span" />
+	<entry key="Menu.Cadastros"									by="xpath"	value="//*[@id='apps-menu']/ul/li[4]/a/span" />
+	<entry key="Menu.ComissaoSeller"							by="xpath"	value="//*[@id='apps-menu']/ul/li[4]/ul/li/a/span" />
+
+	
+	<!-- Tela ConsultarPedidos -->
+	<entry key="TelaConsultarPedidos.BTNProcurar"				by="xpath"	value="//*[@id='form-filtro']/div[2]/div[4]/button" />
+	<entry key="TelaConsultarPedidos.TXTNumPedido"				by="xpath"	value="//*[@id='numeroPedidoSeller']" />
+	<entry key="TelaConsultarPedidos.LbDataPedido"				by="xpath"	value="//*[@id='tabela-pedidos']/thead/tr/th[1]" /> 
+	<entry key="TelaConsultarPedidos.TxtCNPJSeller"				by="xpath"	value="//*[@id='cnpjSeller']" />
+	<entry key="TelaConsultarPedidos.TxtCodigoJde"				by="xpath"	value="//*[@id='codigoJde']" />
+	<entry key="TelaConsultarPedidos.CmbStatusIce"				by="xpath"	value="//*[@id='statusCdp']" />
+	<entry key="TelaConsultarPedidos.CmbStatusTrusthub"			by="xpath"	value="//*[@id='statusTrusthub']" />
+	<entry key="TelaConsultarPedidos.CmbStatusComparacao"		by="xpath"	value="//*[@id='statusComparacao']" />	
+	<entry key="TelaConsultarPedidos.TbPedidos"					by="xpath"	value="//*[@id='tabela-pedidos']" />
+	<entry key="TelaConsultarPedidos.TbDataPedido"				by="xpath"	value="//*[@id='linha']/td[1]" />
+	<entry key="TelaConsultarPedidos.TbPedidoSeller"			by="xpath"	value="//*[@id='linha']/td[2]" />
+	<entry key="TelaConsultarPedidos.TbCNPJSeller"				by="xpath"	value="//*[@id='linha']/td[3]" />
+	<entry key="TelaConsultarPedidos.TbTotalPedido"				by="xpath"	value="//*[@id='linha']/td[4]" />
+	<entry key="TelaConsultarPedidos.TbStatusICE"				by="xpath"	value="//*[@id='linha']/td[5]" />
+	<entry key="TelaConsultarPedidos.TbStatusTrusthub"			by="xpath"	value="//*[@id='linha']/td[6]" />
+	<entry key="TelaConsultarPedidos.TbStatusComparacao"		by="xpath"	value="//*[@id='linha']/td[7]" />
+	<entry key="TelaConsultarPedidos.TbCodJDE"					by="xpath"	value="//*[@id='linha']/td[8]" />
+	<entry key="TelaConsultarPedidos.BTNExportar"				by="xpath"	value="//*[@id='form-filtro']/div[2]/div[4]/a[2]" />
+	<entry key="TelaConsultarPedidos.CmbRegistros"				by="xpath"	value="//*[@id='tabela-pedidos_length']/select" />
+	<entry key="TelaConsultarPedidos.MsgSemDados"				by="xpath"	value="//*[@id='tabela-pedidos']/tbody/tr/td/b" />
+	
+	<!-- Tela ImportarXLS -->
+	<entry key="TelaImportarPlanilha.TXTMensagemErro" 			by="xpath"	value="//*[@id='error-msg']" />
+	<entry key="TelaImportarPlanilha.TXTMensagemErroTabela"		by="xpath"	value="//*[@id='linha']/td[2]" />
+	<entry key="TelaImportarPlanilha.TXTMensagemSucesso"		by="xpath"	value="//*[@id='success-msg']" />
+	<entry key="TelaImportarPlanilha.BTNEscolherArquivo"		by="xpath"	value="//*[@id='arquivo']" />
+	<entry key="TelaImportarPlanilha.BTNImportar"				by="xpath"	value="//*[@id='importarPlanilhaForm']/fieldset/div/div[2]/div/a" />
+	
+	<!-- Tela Comissao -->
+	<entry key="Header.ConsultarComissaoSeller"					by="xpath"	value="/html/body/div[6]/h2" />
+	<entry key="TelaComissao.TXTCNPJ" 							by="xpath"	value="//*[@id='cnpj']" />
+	<entry key="TelaComissao.TXTErroCNPJ"						by="xpath"	value="//*[@id='cnpj.errors']" />
+	<entry key="TelaComissao.TXTRazaoSocial"					by="xpath"	value="//*[@id='razaoSocial']" />
+	<entry key="TelaComissao.TXTErroRazaoSocial"				by="xpath"	value="//*[@id='razaoSocial.errors']" />
+	<entry key="TelaComissao.TXTAN8" 							by="xpath"	value="//*[@id='an8']" />
+	<entry key="TelaComissao.TXTErroAN8" 						by="xpath"	value="//*[@id='an8.errors']" />
+	<entry key="TelaComissao.TXTErroAN8Invalido"				by="xpath"	value="//*[@id='mensagemErro']" />
+	<entry key="TelaComissao.TXTComissao"						by="xpath"	value="//*[@id='comissao']" />
+	<entry key="TelaComissao.TXTErroComissao"					by="xpath"	value="//*[@id='comissao.errors']" />
+	<entry key="TelaComissao.TXTErroComissaoInvalida"			by="xpath"	value="//*[@id='erroValorComissao']/span" />
+	<entry key="TelaComissao.ComboStatus"						by="xpath"	value="//*[@id='status']" />
+	<entry key="TelaComissao.TabelaSellers"						by="xpath"	value="//*[@id='tabela-comissoes']/tbody" />
+	<entry key="TelaComissao.TabelaHistoricoComissoesSeller"	by="xpath"	value="//*[@id='tabela-historicoComissao']/tbody" />
+	<entry key="TelaComissao.BTNProcurar"						by="xpath"	value="//*[@id='form-filtro']/div/div[5]/a[1]" />
+	<entry key="TelaComissao.BTNProcurarInclusao"				by="xpath"	value="//*[@id='comissaoForm']/fieldset/div[1]/div[2]/button" />
+	<entry key="TelaComissao.BTNIncluirSeller"					by="xpath"	value="//*[@id='apps-bar']/div/div[2]/a" />
+	<entry key="TelaComissao.BTNSalvarComissao"					by="xpath"	value="//*[@id='apps-bar']/div/div[3]/a" />
+	<entry key="TelaComissao.BTNEditarSeller"                   by="xpath"	value="//*[@id='linha']/td[6]/a/span" />
+	<entry key="TelaComissao.ColunaAtivo"                       by="xpath"	value="//*[@id='linha']/td[5]" />
+	<entry key="TelaComissao.TelaConsulta"                      by="xpath"	value="/html/body/div[6]/h2" />
+	
+	
+</locators>
