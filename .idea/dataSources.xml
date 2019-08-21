@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="Ipiranga BD HML" uuid="782a03c7-b637-48f2-9f4d-a6a43670a860">
+      <driver-ref>oracle</driver-ref>
+      <synchronize>true</synchronize>
+      <auto-commit>false</auto-commit>
+      <jdbc-driver>oracle.jdbc.OracleDriver</jdbc-driver>
+      <jdbc-url>jdbc:oracle:thin:@//se01-scan.ultra.corp:1521/iposnh.ultra.corp</jdbc-url>
+      <driver-properties>
+        <property name="v$session.program" value="DataGrip" />
+        <property name="oracle.net.DOWN_HOSTS_TIMEOUT" value="60" />
+      </driver-properties>
+    </data-source>
+    <data-source source="LOCAL" name="Ipiranga Teste" uuid="821fb5ee-7b5f-4931-a225-9c35b30534a9">
+      <driver-ref>oracle</driver-ref>
+      <synchronize>true</synchronize>
+      <auto-commit>false</auto-commit>
+      <jdbc-driver>oracle.jdbc.OracleDriver</jdbc-driver>
+      <jdbc-url>jdbc:oracle:thin:@</jdbc-url>
+      <jdbc-additional-properties>
+        <property name="TNSADMIN_DIR" value="$USER_HOME$/Desktop" />
+      </jdbc-additional-properties>
+      <driver-properties>
+        <property name="v$session.program" value="DataGrip" />
+      </driver-properties>
+    </data-source>
+  </component>
+</project>

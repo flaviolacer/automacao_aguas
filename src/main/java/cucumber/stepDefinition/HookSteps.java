@@ -44,7 +44,6 @@ public class HookSteps {
 
 	@After
 	public void after() throws Exception {
-
 		HookSteps.steps.sfClose();
 	}
 }

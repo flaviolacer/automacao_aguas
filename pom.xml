@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>BE</groupId>
-	<artifactId>BaseAutomacao</artifactId>
+	<artifactId>AutomacaoAguas</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>base_automacao</name>
 	<packaging>jar</packaging>
@@ -13,10 +13,14 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<version.surefire.plugin>2.22.0</version.surefire.plugin>
-		
+		<failsafe.version>2.22.0</failsafe.version>
+		<serenity.version>1.9.36</serenity.version>
+		<serenity.maven.version>1.9.36</serenity.maven.version>
+		<serenity.cucumber.version>1.9.14</serenity.cucumber.version>
+
 		<!-- Propriedades de ambiente para utilização nos testes e sobrescrita, quando necessário -->
-		<settings.selenium.project.url>http://www.google.com/</settings.selenium.project.url>
-		<settings.selenium.project.name>BaseAutomacao</settings.selenium.project.name>
+		<settings.selenium.project.url>http://hmlinovacapy.grupoaguasdobrasil.com.br</settings.selenium.project.url>
+		<settings.selenium.project.name>AutomacaoAguas</settings.selenium.project.name>
 		<settings.selenium.endpoint>http://localhost:4444/wd/hub</settings.selenium.endpoint>
 		<settings.selenium.screenshot.dir></settings.selenium.screenshot.dir>
 		<settings.selenium.browser>Chrome</settings.selenium.browser>	
@@ -286,11 +290,13 @@
 					</execution>
 				</executions>
 			</plugin>
-			
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>${version.surefire.plugin}</version>
+				<configuration>
+					<skip>true</skip>
+				</configuration>
 				<dependencies>
 					<!--  Dependência necessária para que seja possível identificar os testes como JUnit 4 -->
 					<dependency>
@@ -299,22 +305,60 @@
 						<version>${version.surefire.plugin}</version>
 					</dependency>
 				</dependencies>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-failsafe-plugin</artifactId>
+				<version>${failsafe.version}</version>
 				<configuration>
-				  <!-- Variáveis de ambiente java injetadas, para serem utilizadas no momento do teste -->
-				  <systemPropertyVariables>
+					<includes>
+						<include>**/*.java</include>
+					</includes>
+					<testFailureIgnore>true</testFailureIgnore>
+					<!-- Variáveis de ambiente java injetadas, para serem utilizadas no momento do teste -->
+					<systemPropertyVariables>
 						<selenium_project_url>${settings.selenium.project.url}</selenium_project_url>
 						<selenium_project>${settings.selenium.project.name}</selenium_project>
 						<selenium_endpoint>${settings.selenium.endpoint}</selenium_endpoint>
 						<selenium.screenshot.dir>${settings.selenium.screenshot.dir}</selenium.screenshot.dir>
-						<selenium_browser>${settings.selenium.browser}</selenium_browser>	
+						<selenium_browser>${settings.selenium.browser}</selenium_browser>
 						<selenium_project_user>${settings.selenium.project.user}</selenium_project_user>
 						<selenium_project_password>${settings.selenium.project.password}</selenium_project_password>
-				  </systemPropertyVariables>
+					</systemPropertyVariables>
 				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>integration-test</goal>
+							<goal>verify</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
-			
-	        
-	        
+
+
+			<plugin>
+				<groupId>net.serenity-bdd.maven.plugins</groupId>
+				<artifactId>serenity-maven-plugin</artifactId>
+				<version>${serenity.maven.version}</version>
+				<dependencies>
+					<dependency>
+						<groupId>net.serenity-bdd</groupId>
+						<artifactId>serenity-core</artifactId>
+						<version>${serenity.version}</version>
+					</dependency>
+				</dependencies>
+				<executions>
+					<execution>
+						<id>serenity-reports</id>
+						<phase>post-integration-test</phase>
+						<goals>
+							<goal>aggregate</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 

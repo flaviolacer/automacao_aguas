@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="base_automacao" />
+        <module name="automacao_aguas" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="base_automacao" target="1.8" />
+      <module name="automacao_aguas" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
