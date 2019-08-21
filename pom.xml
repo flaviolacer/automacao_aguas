@@ -244,26 +244,7 @@
 				</executions>
 			</plugin>
 	
-			<!-- Gerar a partir do JAR normal (não-"reduzido") a versão shade ("RQM") -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-shade-plugin</artifactId>
-				<version>3.1.1</version>
-				<executions>
-					<execution>
-						<phase>package</phase>
-						<goals>
-							<goal>shade</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<shadedArtifactAttached>true</shadedArtifactAttached>
-					<shadedClassifierName>RQM</shadedClassifierName>
-				</configuration>
-			</plugin>
-	
-			<!-- Deletar o JAR normal, para evitar confusões -->
+					<!-- Deletar o JAR normal, para evitar confusões -->
 			<plugin>
 				<artifactId>maven-clean-plugin</artifactId>
 				<version>3.1.0</version>
