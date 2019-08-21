@@ -10,7 +10,7 @@ Funcionalidade: 'Cadastrar localidade na aba de clientes'
     E realizo o login
     E clico na aba de clientes
 
-  Esquema do Cenário: Cadastrar localidade
+  Esquema do Cenário: Cadastrar localidade teste
     Quando eu clicar na opcao 'localidade'
     E clicar no botão 'incluir'
     E preencher os campos nos valores <nome_localidade>, <codigo_localidade>, <cidade>, <data_implantacao>
