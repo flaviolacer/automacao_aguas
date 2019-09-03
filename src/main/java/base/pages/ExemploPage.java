@@ -28,15 +28,15 @@ public class ExemploPage extends BasePage{
 		teste.sfSetText("login", login);
 		teste.sfSetText("password", password);
 		teste.sfClick("btn_entrar");
-		teste.sfWaitElement("iframe_principal", 300);
+		teste.sfWaitElement("iframe_principal", 3000);
         teste.sfSwitchFrame(teste.sfGetElement("iframe_principal").getAttribute("name"));
         teste.sfWaitForPageLoad();
-        teste.sfWaitElement("iframe_pesquisa", 300);
+        teste.sfWaitElement("iframe_pesquisa", 3000);
         teste.sfSwitchFrame(teste.sfGetElement("iframe_pesquisa").getAttribute("name"));
         teste.sfWaitForPageLoad();
 
-		teste.sfWaitElement("btn_ok_principal", 300);
-		teste.sfClick("btn_ok_principal");
+		//teste.sfWaitElement("btn_ok_principal", 3000);
+		//teste.sfClick("btn_ok_principal");
         teste.sfSwitchFrame();
 	}
 
