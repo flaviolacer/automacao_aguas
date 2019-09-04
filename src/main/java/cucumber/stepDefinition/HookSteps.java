@@ -2,6 +2,7 @@ package cucumber.stepDefinition;
 
 import java.io.File;
 
+import net.serenitybdd.core.Serenity;
 import org.apache.commons.lang.StringUtils;
 
 import cucumber.api.java.After;
@@ -38,7 +39,8 @@ public class HookSteps {
 		if (steps.selenium_endpoint.equals(""))
 			steps.loadSeleniumFromDefaultConfig();
 
-		steps.sfRemoteDriver(steps.execution_browser, steps.selenium_endpoint);
+		//steps.sfRemoteDriver(steps.execution_browser, steps.selenium_endpoint);
+		steps.sfRemoteDriverSameDriver(Serenity.getWebdriverManager().getWebdriver());
 		steps.getDriver().manage().window().maximize();
 	}
 
