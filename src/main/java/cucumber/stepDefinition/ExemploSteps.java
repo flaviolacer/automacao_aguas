@@ -26,7 +26,7 @@ public class ExemploSteps {
 
     @E("^realizo o login$")
     public void realizoOLogin() throws Exception {
-        exemploPage.doLogin("flavio.lacerda","z^@02a1z");
+        exemploPage.doLogin("flavio.lacerda","Agu@s2020!");
     }
 
     @Dado("^clico na aba de clientes$")
